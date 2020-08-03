@@ -1,10 +1,12 @@
-console.log("Yo soy el serviceWorker");
+console.log("Yo soy el serviceWorker2 2");
 // var eventoNotifi = self.createEvent('Event');
 // eventoNotifi.initEvent('eventoNotifi', true, true);
 //
 
 const staticCacheName = 'site-static';
 const assets = [
+  '/',
+  '',
   'index.html',
   'Semantic-UI/semantic.min.css',
   'jquery.min.js',

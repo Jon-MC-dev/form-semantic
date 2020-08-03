@@ -41,7 +41,8 @@ self.addEventListener('fetch', evt => {
   );
 
   console.log(evt.request.url);
-  if (evt.request.url=="http://"+location.host+"/ResolviendoELP/form-semantic/Controlador.php?getAllPersonas") {
+  console.log(evt.request.url.includes('getAllPersonas'));
+  if (evt.request.url.includes('getAllPersonas')) {
     self.registration.showNotification("Actualizacion", {
       body: 'Se actualizo la tabla.',
       icon: 'img/crud_create_read_update_delete-512.png'

@@ -1,3 +1,27 @@
+/*
+Registrar el serviceWorker
+ServiceWorker
+*/
+
+
+
+let servicioWorker=null;
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('miServiceWorker.js').then(function(succes) {
+
+    servicioWorker = succes;
+    console.log('Service Worker Registrado ',succes);
+    window.Notification.requestPermission();
+    console.log("Segun se obtubo un permiso");
+}).catch((error)=>{
+    console.log("serviceWorker No registrado",error);
+  });
+}else {
+  console.log("El serviceWorker no se instalara");
+}
+
+
+
 
 let idEliminar;
 
@@ -104,6 +128,8 @@ if(miForm.form('is valid')) {
   });
 }
 });
+
+
 let index;
 function cargarTabla() {
 fetch('Controlador.php?getAllPersonas')
@@ -112,6 +138,7 @@ fetch('Controlador.php?getAllPersonas')
 })
 .then(function(myJson) {
   datosJSON = Object.assign({}, myJson);
+  //servicioWorker.dispatchEvent(eventoNotifi);
   var tablaHtml='';
   myJson=myJson.data;
   for (var i = 0; i < myJson.length; i++) {
@@ -172,7 +199,6 @@ $("#btn-eliminar").on("click",function () {
   }).then(res => res.text())
   .catch(error => console.error('Error:', error))
   .then((response) => {
-
     if (response==="1") {
       console.log('%cSuccess Eliminar:', 'Color:green');
       $("#modalEliminar").modal("hide");

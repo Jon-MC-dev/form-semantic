@@ -1,0 +1,55 @@
+
+{
+"short_name": "CRUD",
+"name": "CRUD",
+"description": "Pequeño crud de ejemplo",
+"start_url": "index",
+"background_color": "#2a2a2a",
+"display": "standalone",
+"scope":"./",
+"theme_color": "#2a2a2a",
+"orientation": "portrait-primary",
+"icons": [
+  {
+    "src": "img/crud_72x72.png",
+    "type": "image/png",
+    "sizes": "72x72"
+  },
+  {
+    "src": "img/crud_96x96.png",
+    "type": "image/png",
+    "sizes": "96x96"
+  },
+  {
+    "src": "img/crud_128x128.png",
+    "type": "image/png",
+    "sizes": "128x128"
+  },
+  {
+    "src": "img/crud_144x144.png",
+    "type": "image/png",
+    "sizes": "144x144"
+  },
+  {
+    "src": "img/crud_152x152.png",
+    "type": "image/png",
+    "sizes": "152x152"
+  },
+  {
+    "src": "img/crud_192x192.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  },
+  {
+    "src": "img/crud_384x384.png",
+    "type": "image/png",
+    "sizes": "384x384"
+  },
+  {
+    "src": "img/crud_512x512.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  }
+]
+
+}

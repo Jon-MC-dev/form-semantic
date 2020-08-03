@@ -1,0 +1,4 @@
+1 Crear un archivo manifest.json
+2 crear un archivo aunque este vacio que sera el service worker
+2 insertar el codigo para registrar el service worker (lo inserte en miScript.js)
+3 insertar en el header de la pagina las etiquetas necesarias en mi caso es index.html
